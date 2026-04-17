@@ -10,7 +10,7 @@ export const DICTIONARY = {
       contact: 'Let\'s Talk',
     },
     hero: {
-      badge: 'Software Engineer @ WEG',
+      badge: 'Software Engineer',
       title: 'Architecting ',
       titleAccent: 'Global Systems',
       titleEnd: ' for Enterprise Scale.',
@@ -35,6 +35,13 @@ export const DICTIONARY = {
       experience: {
         title: 'Career Path',
         education: 'Academic Foundation',
+      },
+      blog: {
+        title: 'Engineering & Architecture',
+        subtitle: 'Technical insights on building scalable systems, architectural decisions, and software engineering at scale.',
+        readMore: 'Read Article',
+        backToBlog: 'Back to Writing',
+        publishedAt: 'Published on',
       },
     },
     experience: [
@@ -94,7 +101,7 @@ export const DICTIONARY = {
       contact: 'Vamos Conversar',
     },
     hero: {
-      badge: 'Software Engineer @ WEG',
+      badge: 'Software Engineer',
       title: 'Arquitetando ',
       titleAccent: 'Sistemas Globais',
       titleEnd: ' em Escala Enterprise.',
@@ -119,6 +126,13 @@ export const DICTIONARY = {
       experience: {
         title: 'Plano de Carreira',
         education: 'Fundação Acadêmica',
+      },
+      blog: {
+        title: 'Engenharia & Arquitetura',
+        subtitle: 'Insights técnicos sobre construção de sistemas escaláveis, decisões arquiteturais e engenharia de software em escala.',
+        readMore: 'Ler Artigo',
+        backToBlog: 'Voltar para Escrita',
+        publishedAt: 'Publicado em',
       },
     },
     experience: [

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --font-sans: var(--font-geist-sans);
@@ -16,16 +17,16 @@
 }
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #000000;
+  --background: #FAFAFA;
+  --foreground: #111111;
   --accent: #007AFF; /* Apple Blue */
   --accent-foreground: #FFFFFF;
-  --border-subtle: rgba(0, 0, 0, 0.1);
+  --border-subtle: rgba(0, 0, 0, 0.08);
 }
 
 .dark {
   --background: #000000;
-  --foreground: #FFFFFF;
+  --foreground: #EDEDED;
   --accent: #0A84FF; /* Apple Dark Blue */
   --accent-foreground: #FFFFFF;
   --border-subtle: rgba(255, 255, 255, 0.15);

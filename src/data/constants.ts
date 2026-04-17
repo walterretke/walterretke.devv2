@@ -4,7 +4,7 @@ export const PERSONAL_INFO = {
   location: "Brazil",
   email: "waltermatheusrm@gmail.com",
   linkedin: "https://www.linkedin.com/in/walter-retke/",
-  github: "#", // Add if available
+  github: "https://github.com/walterretke",
 };
 
 export const TECH_STACK = [

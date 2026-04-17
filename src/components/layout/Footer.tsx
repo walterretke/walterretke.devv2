@@ -24,14 +24,24 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center gap-12">
             <div className="space-y-4">
               <p className="text-[10px] font-black uppercase tracking-[0.3em] text-accent">Social</p>
-              <a
-                href={PERSONAL_INFO.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-sm font-bold text-foreground/60 hover:text-accent transition-all"
-              >
-                LinkedIn
-              </a>
+              <div className="flex flex-col gap-3">
+                <a
+                  href={PERSONAL_INFO.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm font-bold text-foreground/60 hover:text-accent transition-all"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href={PERSONAL_INFO.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm font-bold text-foreground/60 hover:text-accent transition-all"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
             <div className="space-y-4">
               <p className="text-[10px] font-black uppercase tracking-[0.3em] text-accent">Direct</p>
