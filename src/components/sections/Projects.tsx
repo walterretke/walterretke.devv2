@@ -38,12 +38,17 @@ export default function Projects() {
                   <p className="text-xl leading-relaxed text-foreground/50 font-medium">
                     {project.description}
                   </p>
-                  <div className="relative p-6 rounded-2xl bg-accent/[0.03] border-l-4 border-accent overflow-hidden">
-                    <p className="text-sm font-bold text-foreground/80 relative z-10 leading-relaxed">
-                      {project.impact}
-                    </p>
-                    <div className="absolute top-0 right-0 p-2 text-accent/5 font-serif text-8xl leading-none select-none">
-                      &quot;
+                  <div className="pt-6">
+                    <span className="text-[9px] font-black uppercase tracking-[0.2em] text-accent/40 mb-4 block">
+                      {t.sections.projects.impactLabel}
+                    </span>
+                    <div className="relative p-6 rounded-2xl bg-accent/[0.03] border-l-4 border-accent overflow-hidden">
+                      <p className="text-sm font-bold text-foreground/80 relative z-10 leading-relaxed">
+                        {project.impact}
+                      </p>
+                      <div className="absolute top-0 right-0 p-2 text-accent/5 font-serif text-8xl leading-none select-none">
+                        &quot;
+                      </div>
                     </div>
                   </div>
                 </div>

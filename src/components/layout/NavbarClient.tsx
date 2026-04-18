@@ -5,7 +5,7 @@ import { useI18n } from '@/lib/i18n';
 import { useTheme } from '@/lib/theme';
 import { PERSONAL_INFO } from '@/data/constants';
 
-export default function Navbar() {
+export default function Navbar({ showBlog }: { showBlog: boolean }) {
   const { t, locale, setLocale } = useI18n();
   const { theme, toggleTheme } = useTheme();
 
@@ -27,9 +27,11 @@ export default function Navbar() {
             <Link href={`/${locale}/#experience`} className="text-xs font-black uppercase tracking-widest text-foreground/50 hover:text-accent transition-all">
               {t.nav.experience}
             </Link>
-            <Link href={`/${locale}/blogs`} className="text-xs font-black uppercase tracking-widest text-foreground/50 hover:text-accent transition-all">
-              {t.nav.blog}
-            </Link>
+            {showBlog && (
+              <Link href={`/${locale}/blogs`} className="text-xs font-black uppercase tracking-widest text-foreground/50 hover:text-accent transition-all">
+                {t.nav.blog}
+              </Link>
+            )}
           </div>
         </div>
 

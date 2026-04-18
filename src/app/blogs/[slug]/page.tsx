@@ -1,6 +1,6 @@
 import { getSinglePost, getPublishedPosts, getPostMetadataBySlug } from '@/lib/notion';
 import { notFound } from 'next/navigation';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/NavbarServer';
 import Footer from '@/components/layout/Footer';
 import BlogPostContent from '@/components/sections/BlogPostContent';
 import { Metadata } from 'next';
@@ -51,8 +51,25 @@ export default async function BlogPost({ params }: PostProps) {
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.summary,
+    "datePublished": post.date,
+    "author": {
+      "@type": "Person",
+      "name": "Walter Manske"
+    },
+    "url": `https://walterretke.com/blogs/${slug}`
+  };
+
   return (
     <div className="flex min-h-screen flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="flex-grow pt-24">
         <BlogPostContent post={post} />

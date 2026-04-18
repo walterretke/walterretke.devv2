@@ -25,7 +25,15 @@ export default function Experience() {
                   </h3>
                   <p className="text-xl font-bold text-foreground/80 mt-2">{exp.company}</p>
                   
-                  <ul className="mt-10 space-y-6">
+                  <div className="mt-8 flex items-center gap-3">
+                    <div className="h-[1px] flex-1 bg-accent/10" />
+                    <span className="text-[9px] font-black uppercase tracking-[0.2em] text-accent/40 whitespace-nowrap">
+                      {t.sections.experience.impactLabel}
+                    </span>
+                    <div className="h-[1px] w-8 bg-accent/10" />
+                  </div>
+
+                  <ul className="mt-6 space-y-6">
                     {exp.description.map((desc, i) => (
                       <li key={i} className="flex gap-4 text-lg leading-relaxed text-foreground/50 font-medium">
                         <span className="mt-3 h-1 w-1 shrink-0 rounded-full bg-accent/30" />

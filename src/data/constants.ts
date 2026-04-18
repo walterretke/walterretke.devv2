@@ -45,6 +45,17 @@ export const EXPERIENCE = [
       "Built responsive frontend architectures with Next.js and React.",
     ],
   },
+  {
+    company: "Self Employed",
+    role: "Software Engineer (Independent Contractor)",
+    period: "08/2021 – 01/2024",
+    description: [
+      "Partnered with IT companies to design, develop, and deploy scalable software solutions, e-commerce platforms, and institutional websites.",
+      "Modernized legacy applications by migrating frontend architecture to Next.js, achieving a 150% increase in performance.",
+      "Optimized e-commerce platforms and checkout flows, resulting in a 40% increase in processing speed and 20% conversion growth.",
+      "Developed full-stack web and mobile applications using Java, Spring Boot, React, and Flutter, orchestrating deployments with Kubernetes.",
+    ],
+  },
 ];
 
 export const PROJECTS = [

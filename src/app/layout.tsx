@@ -20,21 +20,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://walterretke.com'), // Replace with your domain
   title: {
-    default: "Walter Manske | Software Engineer",
+    default: "Walter Manske | Senior Software Engineer",
     template: "%s | Walter Manske"
   },
-  description: "Senior Software Engineer specialized in high-performance distributed systems, Java backends, and premium Next.js experiences. Exploring architectural decisions and scalable enterprise solutions.",
-  keywords: ["Software Engineer", "Java", "Spring Boot", "Next.js", "Software Architecture", "Distributed Systems", "Web Development"],
+  description: "Senior Software Engineer specialized in Java, Spring Boot, and Next.js. Architecting high-performance distributed systems and global enterprise solutions.",
+  keywords: ["Software Engineer", "Senior Java Engineer", "Spring Boot Architect", "Next.js Specialist", "Cloud-Native Microservices", "Software Architecture Brazil"],
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en',
+      'pt-BR': '/pt',
+    },
+  },
   authors: [{ name: "Walter Manske" }],
   creator: "Walter Manske",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://walterretke.com", // Replace with your actual domain
+    url: "https://walterretke.com",
     siteName: "Walter Manske Portfolio",
-    title: "Walter Manske | Software Engineer",
-    description: "Architecting global systems for enterprise scale. Senior Engineer specialized in Java and Next.js.",
+    title: "Walter Manske | Senior Software Engineer",
+    description: "Architecting global systems for enterprise scale. Specialist in high-concurrency Java backends.",
     images: [
       {
         url: "/perfi-s-fundo.png",
@@ -53,6 +61,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -61,12 +76,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Walter Manske",
+    "url": "https://walterretke.com",
+    "jobTitle": "Senior Software Engineer",
+    "sameAs": [
+      "https://github.com/walterretke",
+      "https://www.linkedin.com/in/walter-retke/"
+    ],
+    "description": "Senior Software Engineer specialized in high-performance distributed systems, Java, and Next.js.",
+    "knowsAbout": ["Java", "Spring Boot", "Next.js", "Software Architecture", "Microservices", "Cloud Computing"]
+  };
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${lora.variable} ${geistMono.variable} scroll-smooth`}
     >
       <body className="antialiased min-h-screen bg-gradient-mesh transition-colors duration-500">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <I18nProvider>
           <ThemeProvider>
             {children}

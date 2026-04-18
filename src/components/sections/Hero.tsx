@@ -30,22 +30,53 @@ export default function Hero() {
             <p className="mt-8 md:mt-10 text-base md:text-xl leading-relaxed text-foreground/50 max-w-2xl mx-auto lg:mx-0 font-medium">
               {t.hero.description}
             </p>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+              <span className="text-[10px] font-black uppercase tracking-widest text-foreground/30 mr-2">
+                {t.hero.currentStack}
+              </span>
+              {['Java', 'Spring Boot', 'Next.js', 'AWS', 'Kubernetes'].map((tech) => (
+                <span key={tech} className="px-3 py-1 rounded-full bg-foreground/[0.03] border border-border-subtle text-[10px] font-bold text-foreground/60">
+                  {tech}
+                </span>
+              ))}
+            </div>
             
-            <div className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 md:gap-6">
+            <div className="mt-10 md:mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-8 md:gap-12">
               <a
                 href={`/${locale}/#projects`}
-                className="w-full sm:w-auto group relative flex h-14 items-center justify-center overflow-hidden rounded-2xl bg-accent px-10 transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-accent/20"
+                className="group flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.2em] text-foreground/50 hover:text-accent transition-all active:scale-95"
               >
-                <span className="relative z-10 text-xs font-black uppercase tracking-widest text-white">
-                  {t.hero.viewProjects}
-                </span>
-                <div className="absolute inset-0 z-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-foreground/5 group-hover:bg-accent group-hover:text-white transition-all">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17l9.2-9.2M17 17V7H7" />
+                  </svg>
+                </div>
+                {t.hero.viewProjects}
+              </a>
+
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                className="group flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.2em] text-foreground/50 hover:text-accent transition-all active:scale-95"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-foreground/5 group-hover:bg-accent group-hover:text-white transition-all">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                  </svg>
+                </div>
+                {t.hero.downloadCV}
               </a>
               
               <a 
                 href={`/${locale}/#experience`} 
-                className="w-full sm:w-auto flex h-14 items-center justify-center rounded-2xl glass border border-border-subtle px-10 text-xs font-black uppercase tracking-widest text-foreground hover:bg-foreground/5 transition-all active:scale-95"
+                className="group flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.2em] text-foreground/50 hover:text-accent transition-all active:scale-95"
               >
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-foreground/5 group-hover:bg-accent group-hover:text-white transition-all">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                  </svg>
+                </div>
                 {t.hero.readStory}
               </a>
             </div>
